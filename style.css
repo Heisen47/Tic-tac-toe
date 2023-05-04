@@ -1,13 +1,13 @@
-.header{
+.header {
     display: flex;
-    background-color:blueviolet;
+    background-color: blueviolet;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: azure;
 }
 
 
-#gameboard{
+#gameboard {
     display: flex;
     justify-content: center;
     padding-top: 15%;
@@ -21,25 +21,54 @@
     align-items: center;
     width: 300px;
     height: 300px;
-    border: 3px solid black;
+    border: 3px solid blueviolet;
     border-radius: 10px;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
-  }
-  
-  .cell {
+}
+
+.cell {
     width: 90px;
     height: 90px;
-    border: 1px solid black;
-  }
-  .cell:nth-child(2n) {
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
+
+.cell:nth-child(2n) {
     border-left: none;
     border-right: none;
-  }
-  .row:nth-child(2n) .cell {
+}
+
+.row:nth-child(2n) .cell {
     border-top: none;
     border-bottom: none;
-  }
-  
+}
+
+.caption{
+    display: flex;
+    padding-top: 55px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+
+.AllBtn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 55px;
+    height: 40px;
+    background: blueviolet;
+    color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: blueviolet;
+    background: azure;
+}
