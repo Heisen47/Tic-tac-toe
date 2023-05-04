@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    background-color:blueviolet;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+}
+
+
+#gameboard{
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+}
+
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+  }
+  .cell:nth-child(2n) {
+    border-left: none;
+    border-right: none;
+  }
+  .row:nth-child(2n) .cell {
+    border-top: none;
+    border-bottom: none;
+  }
+  
