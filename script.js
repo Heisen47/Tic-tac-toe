@@ -8,7 +8,7 @@ let choices = (() => {
         button.addEventListener('click', (e) => {
             // return (e.target.textContent);
             btnChoice = e.target.textContent;
-            console.log(e.target.textContent);
+            console.log(`you selected ${btnChoice}`);
         })
     })
 })()
@@ -16,27 +16,35 @@ let choices = (() => {
 
 //Making the gameboard which will print the array combinations
 
-let gameboard = (() => {
+let gameboard = () => {
     let Arr = [];
     let cells = document.querySelectorAll(".cell");
     let clickedIndex = null;
-    
-// this forEach loop will not let the array be more than 3 long 
+    let sorted = null;
+
+    // this forEach loop will check the length of the array and sort it
+    const process = () => {
         cells.forEach((cell, index) => {
-        cell.addEventListener('click', () => {
-            clickedIndex = Arr.push(index);
-            if (clickedIndex > 3 ) {
-                return(Arr = []);
-            }
-
-            else{
-            console.log(Arr);
-            console.log(clickedIndex);
-            return(clickedIndex);
-        }
-        })        
-
-       
+            cell.addEventListener('click', () => {
+                // console.log('hi');
+                clickedIndex = Arr.push(index);
+                if (clickedIndex <= 3) {
+                    sorted = Arr.sort();
+                    console.log(sorted)
+                }
+        })
+        // console.log(sorted)
     })
+}
 
-})()
+process();
+
+return { process }
+
+}
+
+gameboard()
+
+// let Rules = (() => {
+//     console.log(gameboard.process)
+// })()
