@@ -1,17 +1,39 @@
-// asking the player to select between X and O 
+let playerOne;
+let playerTwo;
+let isPlayerOne = true; // added boolean variable
 
+// asking the player to select between X and O 
 let choices = (() => {
     let btn = document.querySelectorAll(".btn");
     let btnChoice = null;
 
-    btn.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            // return (e.target.textContent);
-            btnChoice = e.target.textContent;
-            console.log(`you selected ${btnChoice}`);
+    let select = () => {
+        btn.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                btnChoice = e.target.textContent.toString();
+                // console.log(`you selected ${btnChoice}`);
+                player(btnChoice); // call player function on each click
+            })
         })
-    })
-})()
+    }
+    select();
+
+    const player = (choice) => {
+        if (isPlayerOne) {
+            playerOne = choice;
+            console.log(`playerOne chose ${playerOne}`);
+            isPlayerOne = false; // toggle boolean
+        } else {
+            playerTwo = choice;
+            console.log(`playerTwo chose ${playerTwo}`);
+            isPlayerOne = true; // toggle boolean
+        }
+    }
+
+    return { select };
+})();
+
+  
 
 
 //Making the gameboard which will print the array combinations
@@ -32,19 +54,31 @@ let gameboard = () => {
                     sorted = Arr.sort();
                     console.log(sorted)
                 }
+            })
+            // console.log(sorted)
         })
-        // console.log(sorted)
-    })
-}
+    }
 
-process();
+    process();
 
-return { process }
+    return { process }
 
 }
 
 gameboard()
 
-// let Rules = (() => {
-//     console.log(gameboard.process)
-// })()
+let Rules = () => {
+    console.log(gameboard.process);
+    const winningAxes = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+
+
+}
