@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    background-color: rgb(154, 87, 216);
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+}
+
+body {
+    background-image: url("/img.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    max-width: 100%;
+    height: auto;
+    background-color: blueviolet;
+  }
+  
+
+#gameboard {
+    display: flex;
+    justify-content: center;
+    padding-top: 12%;
+}
+
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 3px solid azure;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    border: 1px solid azure;
+    cursor: pointer;
+    font-size: 4em;
+    color: aliceblue;
+}
+
+.cell:hover{
+    background-color: darkviolet;
+}
+
+.cell:nth-child(2n) {
+    border-left: none;
+    border-right: none;
+}
+
+.row:nth-child(2n) .cell {
+    border-top: none;
+    border-bottom: none;
+}
+
+.caption{
+    display: flex;
+    padding-top: 55px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+}
+
+.AllBtn{
+    display: flex;
+    justify-content: center;
+}
+
+.modal{
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 500px;
+    height: 400px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+.modalHeader{
+    display: flex;
+    font-size: larger;
+    padding: 5px;
+    padding-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+}
+.modalBody{
+    display: flex;
+    font-size: larger;
+    padding: 5px;
+    padding-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+}
+
+#btn{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: blueviolet;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#btn:hover{
+    color: blueviolet;
+    background-color: aliceblue;
+}
+
+#winnerInfo{
+    padding-left: 175px;
+    padding-top: 50px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:purple ;
+}
+
