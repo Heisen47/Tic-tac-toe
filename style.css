@@ -34,6 +34,7 @@
     height: 90px;
     border: 1px solid blueviolet;
     cursor: pointer;
+    font-size: 4em;
 }
 
 .cell:nth-child(2n) {
