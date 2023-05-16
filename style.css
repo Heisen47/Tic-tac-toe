@@ -11,7 +11,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: fit-content;
-    
   }
   
 
@@ -44,6 +43,10 @@ body {
     cursor: pointer;
     font-size: 4em;
     color: aliceblue;
+}
+
+.cell:hover{
+    background-color: darkviolet;
 }
 
 .cell:nth-child(2n) {
