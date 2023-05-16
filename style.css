@@ -1,11 +1,19 @@
 .header {
     display: flex;
-    background-color: blueviolet;
+    background-color: rgb(154, 87, 216);
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: azure;
 }
 
+body {
+    background-image: url("/img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    
+  }
+  
 
 #gameboard {
     display: flex;
@@ -21,7 +29,7 @@
     align-items: center;
     width: 300px;
     height: 300px;
-    border: 3px solid blueviolet;
+    border: 3px solid azure;
     border-radius: 10px;
 }
 
@@ -32,9 +40,10 @@
 .cell {
     width: 90px;
     height: 90px;
-    border: 1px solid blueviolet;
+    border: 1px solid azure;
     cursor: pointer;
     font-size: 4em;
+    color: aliceblue;
 }
 
 .cell:nth-child(2n) {
@@ -52,7 +61,7 @@
     padding-top: 55px;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: blueviolet;
+    color: azure;
 }
 
 .AllBtn{
@@ -60,16 +69,3 @@
     justify-content: center;
 }
 
-button{
-    width: 55px;
-    height: 40px;
-    background: blueviolet;
-    color: azure;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover{
-    color: blueviolet;
-    background: azure;
-}
