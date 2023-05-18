@@ -1,5 +1,14 @@
 console.log('Welcome to Tic-Tac-Toe');
 
+let Welcome = (() =>{
+    let startScrn = document.querySelector('.modalTwo');
+    let startBtn = document.querySelector('#StartBtn');
+
+    startBtn.addEventListener('click' , ()=>{
+        startScrn.style.display = 'none';
+    })
+})();
+
 let GetModal = () => {
     const modal = document.querySelector(".modal");
     let restart = document.getElementById("btn");
@@ -98,6 +107,5 @@ const gameboard = (() => {
 })();
 
 gameboard.render();
-
 
 
