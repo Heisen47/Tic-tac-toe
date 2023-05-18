@@ -1,5 +1,6 @@
 console.log('Welcome to Tic-Tac-Toe');
 
+//welcome screen at the start
 let Welcome = (() =>{
     let startScrn = document.querySelector('.modalTwo');
     let startBtn = document.querySelector('#StartBtn');
@@ -9,6 +10,8 @@ let Welcome = (() =>{
     })
 })();
 
+
+//after winning the game modal
 let GetModal = () => {
     const modal = document.querySelector(".modal");
     let restart = document.getElementById("btn");
@@ -30,6 +33,8 @@ let GetModal = () => {
 
 GetModal();
 
+
+//logic for the gameboard 
 const gameboard = (() => {
     const board = ["", "", "", "", "", "", "", "", ""];
 
@@ -76,7 +81,7 @@ const gameboard = (() => {
         });
     };
 
-
+    //checking the win condition by using the 'some' method to iterate of the winning combos and storing in it combo array and then the 'every' function does the same but now its checking for the correct index inside 'combo' array amd return value
     const checkWin = (player) => {
         return winningCombos.some((combo) => {
             return combo.every((index) => {
